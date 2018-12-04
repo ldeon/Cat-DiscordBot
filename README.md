@@ -7,7 +7,7 @@ Discord.js bot with moderation and leisure features.
 - Implementing a starred message program, such as a bot would provide like Starboard.
 - Music and audio engine to play local .flac and .mp3 files in the bot's folder as well as YouTube audio streaming features.
 
-# Adding the bot to your server
+## Adding the bot to your server
 If you'd like to add the bot to your server, please go to https://discordapp.com/deadlink to invite it. Beware that you'll need Manage Server permissions. Also beware that the bot goes offline every once in a while, since it is self hosted. The more servers it is in, the more stress it will endure.. I am currently not fully able to host the bot 24/7. Hopefully in the future this will change. I would **strongly** recommend hosting it yourself, which takes a minimal amount of knowledge in Git, as well as your traditional Terminal and cmd. It is fairly easy to keep updated and does not require too much attention as long as you keep the prompt up and running with a strong network connection. If there ever is bug issues you are unable to solve, please send me an email at leidentaysarconah@gmail.com, or more traditionally, my discord handle is Leiden Arnesson#1807.
 
 ## Installation and Running of the bot on your server (hosting it yourself)
@@ -38,25 +38,27 @@ yarn start
 If you want to run it in the background with `screen` you can use `yarn background` instead.
 
 # Configuration
-# Step One
+## Step One
 Once you have created your bot user, and selected your desired avatar and username, copy the bot user's token. Please, **DO NOT SHARE THE TOKEN.** It will put you, your friends and your entire server at risk if it leaks out. Immediately reset the token as soon as you find out it has been compromised.
 
-# Step Two
+## Step Two
 Take the token you copied and paste it into the field mentioned in `config.json`. Once you have done that, enable Developer Mode in Discord and copy your user ID by right clicking on your profile and selecting "Copy ID". Paste your user ID in the owner field in `config.json`. There, you are super close!
 
-# Step Three
+## Step Three
 Go back to your Bot User page online, and find the tab with your "Client ID". Copy the Client ID, and paste it into your invite URL. Like so: `https://discordapp.com/oauth2/authorize?client_id=PASTEYOURCLIENTIDHERE&scope=bot`. Obviously replace `PASTEYOURCLIENTIDHERE` with your Client ID you just copied. 
-# Step Four
+## Step Four
 Once you have done so, copy the Invite link you just made and paste it into your web browser. A page will show up asking for permissions. You will need to have Manage Server and Admin permissions in the server you want to put it in for it to list it. Once the bot has arrived in your server, give it an admin role with any desired name, as high as you can make it in the hierarchy of roles. Create 3 channels in your server (or four, if you desire). One has to be named #log, one named #adminbot, and one named #adminlog. You will see why later.
 
-# Step Five
+## Step Five
 Make #adminbot and #adminlog visible only to you and your desired moderation team, as well as the bot. Send the command `=config adminbotChannel` in your #adminbot channel. You do not need to do so for #adminlog, the bot already realizes it exists if you let it see it.
 
-# Step Six
+## Step Six
 Go to your #log channel and send the command in chat, `=config logChannel`. The bot will now use this channel for logging pings, joins and leaves, bans, warns and kicks. Make #log visible to @everyone but only moderators or yourself can type.
 
 There you have it, now you have configured the bot! The main commands are in the `cmds` folder, but you can use =mute, =warn, =kick, =ban, and many others once you get the hang of it. Again, DM me for more info! Any commands in the commands folder can be used just as their file name without the .js, preceded by `=`, the prefix.
 
 
 This bot uses code from various sources. To see a list of all of them, please visit https://dev.mountainnil.org/freezer/git/cat/catsourcelicense.html
+
+This bot is the sole work of myself and is in no way to be modified or released without crediting me first.
 
