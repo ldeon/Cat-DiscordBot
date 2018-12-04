@@ -38,22 +38,21 @@ yarn start
 If you want to run it in the background with `screen` you can use `yarn background` instead.
 
 # Configuration
-**Step One**
+# Step One
 Once you have created your bot user, and selected your desired avatar and username, copy the bot user's token. Please, **DO NOT SHARE THE TOKEN.** It will put you, your friends and your entire server at risk if it leaks out. Immediately reset the token as soon as you find out it has been compromised.
 
-**Step Two**
+# Step Two
 Take the token you copied and paste it into the field mentioned in `config.json`. Once you have done that, enable Developer Mode in Discord and copy your user ID by right clicking on your profile and selecting "Copy ID". Paste your user ID in the owner field in `config.json`. There, you are super close!
 
-**Step Three**
+# Step Three
 Go back to your Bot User page online, and find the tab with your "Client ID". Copy the Client ID, and paste it into your invite URL. Like so: `https://discordapp.com/oauth2/authorize?client_id=PASTEYOURCLIENTIDHERE&scope=bot`. Obviously replace `PASTEYOURCLIENTIDHERE` with your Client ID you just copied. 
-
-**Step Four**
+# Step Four
 Once you have done so, copy the Invite link you just made and paste it into your web browser. A page will show up asking for permissions. You will need to have Manage Server and Admin permissions in the server you want to put it in for it to list it. Once the bot has arrived in your server, give it an admin role with any desired name, as high as you can make it in the hierarchy of roles. Create 3 channels in your server (or four, if you desire). One has to be named #log, one named #adminbot, and one named #adminlog. You will see why later.
 
-**Step Five**
+# Step Five
 Make #adminbot and #adminlog visible only to you and your desired moderation team, as well as the bot. Send the command `=config adminbotChannel` in your #adminbot channel. You do not need to do so for #adminlog, the bot already realizes it exists if you let it see it.
 
-**Step Six**
+# Step Six
 Go to your #log channel and send the command in chat, `=config logChannel`. The bot will now use this channel for logging pings, joins and leaves, bans, warns and kicks. Make #log visible to @everyone but only moderators or yourself can type.
 
 There you have it, now you have configured the bot! The main commands are in the `cmds` folder, but you can use =mute, =warn, =kick, =ban, and many others once you get the hang of it. Again, DM me for more info! Any commands in the commands folder can be used just as their file name without the .js, preceded by `=`, the prefix.
